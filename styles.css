@@ -199,3 +199,8 @@ li.valid {
 #country:focus option:first-of-type {
   display: none;
 }
+
+/* Hide iframe bug when page is loaded */
+iframe#wah2d20u09h12kh {
+  display: none;
+}
