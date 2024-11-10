@@ -1,0 +1,201 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  overflow-y: hidden;
+}
+
+input,
+select {
+  padding: 0 2px 2px 2px;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  background-color: rgb(233, 242, 247);
+}
+
+select {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(233, 242, 247);
+  box-shadow: 2px 3px 20px 5px rgb(0 0 0 / 0.2);
+  border: 1px solid rgb(23, 6, 91);
+  gap: 40px;
+  padding: 50px;
+  width: 400px;
+  border-radius: 25px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+form label {
+  font-size: 1.3rem;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+}
+
+button#submitBtn {
+  appearance: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 50px;
+  font-size: 1.3rem;
+  width: 100%;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: rgb(188, 247, 247);
+  transition: transform 0.3s ease-in; 
+  font-family: "Roboto", serif;
+}
+
+button#submitBtn,
+.pass-toggle {
+  -webkit-user-select: none;  
+  -moz-user-select: none;     
+  -ms-user-select: none;      
+  user-select: none;         
+  outline: none;
+}
+
+button#submitBtn:hover {
+  background-color: rgb(183, 239, 239);
+}
+
+button#submitBtn:active {
+  transform: scale(1.2);
+}
+
+#pass {
+  padding-right: 50px;
+}
+
+.pass-requirements-wrapper {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  border: 1px solid rgb(1, 1, 1);
+  box-shadow: 2px 3px 20px 5px rgb(0 0 0 / 0.2);
+  border-radius: 20px;
+  width: 280px;
+  left: 125%;
+  bottom: -70px;
+  background-color: rgba(0, 0, 0, 0.506);
+}
+
+.pass-requirements-wrapper ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.pass-requirements-wrapper li {
+  list-style-type: none;
+  color: rgb(252, 252, 252);
+}
+
+.pass-requirements-wrapper li::before {
+  content: "\2713";
+  padding-right: 15px;
+}
+
+.pass-toggle {
+  position: absolute;
+  top: 55%;
+  right: 5px;
+  color: rgba(0, 0, 0, 0.63);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#mail ~ .valid-checkmark {
+  left: 19%;
+}
+
+#country ~ .valid-checkmark {
+  left: 26%;
+}
+
+#postal ~ .valid-checkmark {
+  left: 39%;
+}
+
+#pass ~ .valid-checkmark {
+  left: 32%;
+}
+
+#confirm-pass ~ .valid-checkmark {
+  left: 59%;
+}
+
+.valid-checkmark {
+  visibility: hidden;
+  background-image: url(/checkmark.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+li.valid {
+  color: rgb(97, 249, 97);
+}
+
+.validInput {
+  border-bottom: 1px solid green;
+}
+
+.error {
+  color: rgb(159, 10, 10);
+  font-size: 0.95rem;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 2px;
+}
+
+::placeholder {
+  font-size: 1.1rem;
+  color: rgba(128, 128, 128, 0.764);
+}
+
+#country:focus option:first-of-type {
+  display: none;
+}

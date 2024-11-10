@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <form novalidate>
+    <!--EMAIL-->
+    <div class="email-wrapper">
+      <label for="mail">Email</label>
+      <input type="email" id="mail" name="email" maxlength="254" placeholder="sample@example.com" autocomplete="email">
+      <span class="email-error error" aria-live="polite"></span>
+      <div class="valid-checkmark"></div>
+    </div>
+
+    <!--COUNTRIES-->
+    <div class="country-wrapper">
+      <label for="country">Country</label>
+      <select id="country" name="countries">
+        <option value="" selected>Select a country</option>
+        <option value="us">United States</option>
+        <option value="ua">Ukraine</option>
+        <option value="ca">Canada</option>
+        <option value="es">Spain</option>
+      </select>
+      <span class="country-error error" aria-live="polite"></span>
+      <div class="valid-checkmark"></div>
+    </div>
+
+    <!--POSTAL CODE-->
+    <div class="postal-wrapper">
+      <label for="postal">Postal Code</label>
+      <input type="text" id="postal" name="postal-code">
+      <span class="postal-error error" aria-live="polite"></span>
+      <div class="valid-checkmark"></div>
+    </div>
+
+    <!--PASSWORD-->
+    <div class="pass-wrapper">
+      <label for="pass">Password</label>
+      <input type="password" id="pass" name="password" autocomplete="off">
+      <span class="password-error error" aria-live="polite"></span>
+      <div class="valid-checkmark"></div>
+      <div class="pass-toggle">Show</div>
+      <div class="pass-requirements-wrapper">
+        <ul>
+          <li>Minimum 8 characters long</li>
+          <li>At least one uppercase letter</li>
+          <li>At least one lowercase letter</li>
+          <li>At least one number</li>
+          <li>At least one special character</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!--PASSWORD CONFIRMATION-->
+    <div class="confirm-pass-wrapper">
+      <label for="confirm-pass">Confirm Password</label>
+      <input type="password" id="confirm-pass" name="confirm-password" autocomplete="off">
+      <span class="confirm-password-error error" aria-live="polite"></span>
+      <div class="valid-checkmark"></div>
+    </div>
+
+    <button type="submit" id="submitBtn" value="Submit">Submit</button>
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
