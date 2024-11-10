@@ -164,7 +164,7 @@ button#submitBtn:active {
 
 .valid-checkmark {
   visibility: hidden;
-  background-image: url(/checkmark.svg);
+  background-image: url(./checkmark.svg);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
